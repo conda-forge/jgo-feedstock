@@ -1,5 +1,5 @@
 {% set name = "jgo" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 880d880badc2b3ec88ed15f063be3fe12c83eec5c951b743b182b66d81977188
+  sha256: 440d23946d5d91b9855b8329373a7b2b66d77231486cbb82542aed7177122a40
 
 build:
   number: 1000
-  script: "{{ PYTHON }} -m pip install . -vvv"
   skip: True  # [py2k]
 
 requirements:
@@ -22,14 +21,20 @@ requirements:
     - python
 
 test:
+  requires:
+    - openjdk
+    - maven
   imports:
     - jgo
+  commands:
+    - test "${JGO_CACHE_DIR}" = "${CONDA_PREFIX}/jgo"  # [unix]
+    - if not "%JGO_CACHE_DIR%" == "%CONDA_PREFIX%\jgo" exit 1  # [win]
 
 about:
   home: https://github.com/scijava/jgo
   license: PUBLIC-DOMAIN
   license_family: PUBLIC-DOMAIN
-  summary: 'Launch Java code from the CLI, installation-free. '
+  summary: 'Launch Java code from the CLI, installation-free.'
   doc_url: https://github.com/scijava/jgo
   dev_url: https://github.com/scijava/jgo
 
