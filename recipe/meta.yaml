@@ -11,14 +11,14 @@ source:
 
 build:
   number: 2
-  skip: True  # [py2k]
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - psutil
 
 test:
