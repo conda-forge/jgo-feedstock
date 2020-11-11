@@ -11,14 +11,14 @@ source:
 
 build:
   number: 2
-  skip: True  # [py2k]
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - psutil
 
 test:
@@ -33,7 +33,7 @@ test:
 
 about:
   home: https://github.com/scijava/jgo
-  license: PUBLIC-DOMAIN
+  license: Unlicense
   license_family: PUBLIC-DOMAIN
   summary: 'Launch Java code from the CLI, installation-free.'
   doc_url: https://github.com/scijava/jgo
@@ -42,5 +42,6 @@ about:
 extra:
   recipe-maintainers:
     - ctrueden
+    - elevans
+    - hinerm
     - hanslovsky
-    - hadim
