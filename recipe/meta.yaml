@@ -34,7 +34,7 @@ test:
 about:
   home: https://github.com/scijava/jgo
   license: Unlicense
-  license_family: Unlicense
+  license_family: PUBLIC-DOMAIN
   summary: 'Launch Java code from the CLI, installation-free.'
   doc_url: https://github.com/scijava/jgo
   dev_url: https://github.com/scijava/jgo
