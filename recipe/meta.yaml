@@ -1,5 +1,5 @@
 {% set name = "jgo" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d40bd0869e9fb303d06ac59b601a50361c7329b3ee27ccc8fc1c90c0b130023f
+  sha256: 48cfab8ec880692d93b22c42e0239f4792c009461c121c15549c456c6a6a4eb6
 
 build:
   number: 0
@@ -15,10 +15,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - psutil
 
 test:
