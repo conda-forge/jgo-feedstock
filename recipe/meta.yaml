@@ -19,7 +19,7 @@ requirements:
     - pip
     - setuptools >=61.2
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - psutil
 
 test:
