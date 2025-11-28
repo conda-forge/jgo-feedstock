@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   noarch: python
+  entry_points:
+    - jgo = jgo:main
 
 requirements:
   host:
