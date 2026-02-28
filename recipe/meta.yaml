@@ -13,21 +13,26 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - jgo = jgo:main
+    - jgo = jgo.__main__:main
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=61.2
+    - setuptools >=77.0.0
   run:
     - python >={{ python_min }}
+    - cjdk >=0.4.0
     - psutil
+    - requests
+    - rich >=14.2.0
+    - rich-click >=1.9.5
+    - semver >=3.0.0
+    - tomli >=2.0.0
+    - tomli-w >=1.0.0
 
 test:
   requires:
-    - openjdk
-    - maven
     - python {{ python_min }}
   imports:
     - jgo
@@ -36,16 +41,15 @@ test:
     - if not "%JGO_CACHE_DIR%" == "%CONDA_PREFIX%\jgo" exit 1  # [win]
 
 about:
-  home: https://github.com/scijava/jgo
+  home: https://github.com/apposed/jgo
   license: Unlicense
   license_family: PUBLIC-DOMAIN
-  summary: Launch Java code from the CLI, installation-free.
-  doc_url: https://github.com/scijava/jgo
-  dev_url: https://github.com/scijava/jgo
+  summary: Launch Java code from Python and the CLI, installation-free.
+  doc_url: https://jgo.apposed.org/
+  dev_url: https://github.com/apposed/jgo
 
 extra:
   recipe-maintainers:
     - ctrueden
     - elevans
     - hinerm
-    - hanslovsky
