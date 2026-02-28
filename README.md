@@ -3,15 +3,15 @@ About jgo-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jgo-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/scijava/jgo
+Home: https://github.com/apposed/jgo
 
 Package license: Unlicense
 
 Summary: Launch Java code from the CLI, installation-free.
 
-Development: https://github.com/scijava/jgo
+Development: https://github.com/apposed/jgo
 
-Documentation: https://github.com/scijava/jgo
+Documentation: https://jgo.apposed.org/
 
 Current build status
 ====================
