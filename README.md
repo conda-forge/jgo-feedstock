@@ -7,7 +7,7 @@ Home: https://github.com/apposed/jgo
 
 Package license: Unlicense
 
-Summary: Launch Java code from the CLI, installation-free.
+Summary: Launch Java code from Python and the CLI, installation-free.
 
 Development: https://github.com/apposed/jgo
 
@@ -149,6 +149,5 @@ Feedstock Maintainers
 
 * [@ctrueden](https://github.com/ctrueden/)
 * [@elevans](https://github.com/elevans/)
-* [@hanslovsky](https://github.com/hanslovsky/)
 * [@hinerm](https://github.com/hinerm/)
 
