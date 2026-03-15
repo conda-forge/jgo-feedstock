@@ -1,5 +1,7 @@
 {% set name = "jgo" %}
 {% set version = "2.0.1" %}
+{% set build_number = 0 %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
