@@ -1,7 +1,5 @@
 {% set name = "jgo" %}
 {% set version = "2.0.1" %}
-{% set build_number = 0 %}
-{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +10,7 @@ source:
   sha256: b8c4d0cd4678c837b179c35913e3a626c4ce47609ee1614e97ffb977d673bb4c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - jgo = jgo.__main__:main
