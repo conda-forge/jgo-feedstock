@@ -36,8 +36,9 @@ test:
   imports:
     - jgo
   commands:
-    - test "${JGO_CACHE_DIR}" = "${CONDA_PREFIX}/jgo"  # [unix]
-    - if not "%JGO_CACHE_DIR%" == "%CONDA_PREFIX%\jgo" exit 1  # [win]
+    - test "${JGO_CACHE_DIR}" = "${CONDA_PREFIX}/jgo"
+    - test -f "${CONDA_PREFIX}/etc/conda/activate.d/jgo_activate.bat"
+    - test -f "${CONDA_PREFIX}/etc/conda/deactivate.d/jgo_deactivate.bat"
 
 about:
   home: https://github.com/apposed/jgo
