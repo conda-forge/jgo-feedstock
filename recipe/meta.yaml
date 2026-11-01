@@ -33,9 +33,12 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - jgo
   commands:
+    - pip check
+    - jgo --help
     - test "${JGO_CACHE_DIR}" = "${CONDA_PREFIX}/jgo"
     - test -f "${CONDA_PREFIX}/etc/conda/activate.d/jgo_activate.bat"
     - test -f "${CONDA_PREFIX}/etc/conda/deactivate.d/jgo_deactivate.bat"
