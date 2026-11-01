@@ -1,5 +1,5 @@
 {% set name = "jgo" %}
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 40d8f9135ebcb05a185c65de45d0bb7148f62820a2741adb1d1b06216a79cbf0
+  sha256: 6d869cff3647be1e1359ed99c74e2ffe1229b330860aacb590055ae3f2188403
 
 build:
   number: 0
@@ -23,22 +23,25 @@ requirements:
   run:
     - python >={{ python_min }}
     - cjdk >=0.4.0
-    - psutil
-    - requests
-    - rich >=14.2.0
+    - psutil >=7
+    - requests >=2.30.0
+    - rich >=14.3.0
     - rich-click >=1.9.5
     - semver >=3.0.0
-    - tomli >=2.0.0
     - tomli-w >=1.0.0
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - jgo
   commands:
-    - test "${JGO_CACHE_DIR}" = "${CONDA_PREFIX}/jgo"  # [unix]
-    - if not "%JGO_CACHE_DIR%" == "%CONDA_PREFIX%\jgo" exit 1  # [win]
+    - pip check
+    - jgo --help
+    - test "${JGO_CACHE_DIR}" = "${CONDA_PREFIX}/jgo"
+    - test -f "${CONDA_PREFIX}/etc/conda/activate.d/jgo_activate.bat"
+    - test -f "${CONDA_PREFIX}/etc/conda/deactivate.d/jgo_deactivate.bat"
 
 about:
   home: https://github.com/apposed/jgo
