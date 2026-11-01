@@ -1,4 +1,4 @@
-"${PYTHON}" -m pip install . -vvv
+"${PYTHON}" -m pip install . -vv --no-deps --no-build-isolation
 
 for CHANGE in "activate" "deactivate"
 do
