@@ -1,5 +1,5 @@
 {% set name = "jgo" %}
-{% set version = "3.3.0" %}
+{% set version = "3.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d869cff3647be1e1359ed99c74e2ffe1229b330860aacb590055ae3f2188403
+  sha256: 16d13ec7ee186463f9c2604a0c86749f8f837d3b44810195b43a796f6a25ac2d
 
 build:
   number: 0
